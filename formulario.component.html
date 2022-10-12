@@ -1,0 +1,32 @@
+<form #formulario="ngForm">
+    <h3> Educación financiera</h3>
+    <label> ¿cuantas veces al año compras ropa?</label>
+    <input type="text" name="ropa" placeholder="" [(ngModel)]="formData.ropa">
+    <div *ngIf="+formData.ropa>=1">Aprovecha las temporadas de descuentos</div>
+    <ng-template #formData.ropa>¡Buen trabajo!</ng-template>
+    <label> En el mes cuantas veces vas a hacer mercado </label>
+    <input type="text" name="mercado" placeholder="" [(ngModel)]="formData.mercado">
+    <div *ngIf="+formData.mercado>2">Aprovecha los dias de descuentos en los supermercados</div>
+    <ng-template #formData.mercado>¡Buen trabajo!</ng-template>
+    <label> Cuantas veces al año toma vaciones</label>
+    <input type="text" name="vacaciones" placeholder="" [(ngModel)]="formData.vacaciones">
+    <div *ngIf="+formData.vacaciones>2">Revisa los descuentos que hacen las aerolineas</div>
+    <ng-template #formData.vacaciones>¡Buen trabajo!</ng-template>
+    <label> Aprovechas los descuentos en las tiendas </label>
+    <input type="email" name="descuentos" placeholder="" [(ngModel)]="formData.descuentos">
+    <div *ngIf="+formData.descuentos>1">Busca las revistas de descuentos de cadena</div>
+    <ng-template #formData.descuentos>¡Buen trabajo!</ng-template>
+    <label> Coleccionas cupones de descuentos </label>
+    <input type="text " name="cupones " placeholder=" " [(ngModel)]="formData.cupones">
+    <div *ngIf="+formData.cupones>1"> Revisa los periodicos, mas seguido</div>
+    <ng-template #formData.cupones>¡Buen trabajo!</ng-template>
+    <label> Comes fuera de casa </label>
+    <input type="text" name="cena" placeholder="" [(ngModel)]="formData.cena">
+    <div *ngIf="+formData.cena>1"> Cocina en casa es mas saludable </div>
+    <ng-template #formData.cena>¡Buen trabajo!</ng-template>
+    <label> Cuantas tarjetas de credito manejas </label>
+    <input type="text" name="tarjetas" placeholder="" [(ngModel)]="formData.tarjetas">
+    <div *ngIf="+formData.tarjetas>1"> Revisa los periodicos, mas seguido</div>
+    <ng-template #formData.tarjetas>¡Buen trabajo!</ng-template>
+    <button type="submit" (click)="guardarCliente()">Guardar</button>
+</form>
