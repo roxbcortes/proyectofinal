@@ -2,8 +2,13 @@
     <h3> Educación financiera</h3>
     <label> ¿cuantas veces al año compras ropa?</label>
     <input type="text" name="ropa" placeholder="" [(ngModel)]="formData.ropa">
-    <div *ngIf="+formData.ropa>=1">Aprovecha las temporadas de descuentos</div>
+    <div *ngIf="+formData.ropa>=1; ">Aprovecha las temporadas de descuentos</div>
+
+
+
     <ng-template #formData.ropa>¡Buen trabajo!</ng-template>
+
+
     <label> En el mes cuantas veces vas a hacer mercado </label>
     <input type="text" name="mercado" placeholder="" [(ngModel)]="formData.mercado">
     <div *ngIf="+formData.mercado>2">Aprovecha los dias de descuentos en los supermercados</div>
@@ -29,4 +34,35 @@
     <div *ngIf="+formData.tarjetas>1"> Revisa los periodicos, mas seguido</div>
     <ng-template #formData.tarjetas>¡Buen trabajo!</ng-template>
     <button type="submit" (click)="guardarCliente()">Guardar</button>
+
 </form>
+<div container-footer>
+    <footer>
+        <div class="logo">
+            <img src="./assets/profit1.jpg" height="150pxl" text-aling="center">
+        </div>
+
+
+
+        <div class="redesSociales">
+            <img src="./assets/facebook.jpg" height="25pxl">
+            <img src="./assets/instagram.jpg" height="25pxl">
+            <img src="./assets/whatsapp.jpg" height="25pxl">
+
+        </div>
+
+
+
+
+        <hr>
+        <h5>Copyright 2022© - Todos los derechos reservados </h5>
+
+
+
+        <div class="contactanos">
+            <p>Contáctanos al 601-740-9856 o envía un correo a ayuda@profit.com</p>
+        </div>
+
+
+    </footer>
+</div>
